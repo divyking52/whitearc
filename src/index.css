@@ -84,6 +84,37 @@
   background: #E0775B;
 }
 
+/* Cloud and mist animations */
+@keyframes cloudDriftLeft {
+  0% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(-25px, -4px, 0) scale(1.02); }
+  100% { transform: translate3d(0, 0, 0) scale(1); }
+}
+
+@keyframes cloudDriftRight {
+  0% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(30px, 3px, 0) scale(0.98); }
+  100% { transform: translate3d(0, 0, 0) scale(1); }
+}
+
+@keyframes cloudBillow {
+  0% { transform: translate3d(-10px, 0, 0) scale(1); opacity: 0.75; }
+  50% { transform: translate3d(10px, -6px, 0) scale(1.04); opacity: 0.9; }
+  100% { transform: translate3d(-10px, 0, 0) scale(1); opacity: 0.75; }
+}
+
+.animate-cloud-left {
+  animation: cloudDriftLeft 24s ease-in-out infinite;
+}
+
+.animate-cloud-right {
+  animation: cloudDriftRight 28s ease-in-out infinite;
+}
+
+.animate-cloud-billow {
+  animation: cloudBillow 18s ease-in-out infinite;
+}
+
 /* Hide default cursor on desktop when custom cursor is active */
 @media (pointer: fine) {
   .cursor-none-custom {
